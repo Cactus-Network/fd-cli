@@ -14,10 +14,10 @@ pip install -e . --extra-index-url https://pypi.chia.net/simple/
 ```shell
 
 # Set env var to blockchain path.
-export FD_CLI_BC_DB_PATH=/root/.flora/mainnet/db/blockchain_v1_mainnet.sqlite
+export FD_CLI_BC_DB_PATH=/root/.cactus/mainnet/db/blockchain_v1_mainnet.sqlite
 # Set env var to wallet path.
 # This must be wallet that is associated with mnemonic from which NFT plot was created.
-export FD_CLI_WT_DB_PATH=/root/.flora/mainnet/wallet/db/blockchain_wallet_v1_mainnet_<fingerprint>.sqlite
+export FD_CLI_WT_DB_PATH=/root/.cactus/mainnet/wallet/db/blockchain_wallet_v1_mainnet_<fingerprint>.sqlite
 
 # Set env var to launcher id of NFT plot.
 export LAUNCHER_HASH=aaa0cbae497933a6c029a3819759fe148829dfde0316cb0512ccad23edce6aaa
@@ -29,8 +29,8 @@ fd-cli nft-recover \
   -p "$POOL_CONTRACT_ADDRESS" \
   -nh 127.0.0.1 \
   -np 18755 \
-  -ct /root/.flora/mainnet/config/ssl/full_node/private_full_node.crt \
-  -ck /root/.flora/mainnet/config/ssl/full_node/private_full_node.key
+  -ct /root/.cactus/mainnet/config/ssl/full_node/private_full_node.crt \
+  -ck /root/.cactus/mainnet/config/ssl/full_node/private_full_node.key
   
 # All coins that were mined +7 days ago WITH NFT PLOT should be spendable soon via wallet.
 ```
