@@ -39,24 +39,6 @@ fd-cli nft-recover \
   
 # All coins that were mined +7 days ago WITH NFT PLOT should be spendable soon via wallet.
 
-FAQ
-How to find CONTRACT_HASH?
-cd chia-blockhain
-. ./activate
-chia plotnft show
-Wallet height: 5344
-Sync status: Not synced
-Wallet id 2: 
-Current state: SELF_POOLING
-Current state from block height: 1739
-Launcher ID: eaf0cbae497933a6c029a3819759fe148829dfde0316cb0512ccad23edce6afa
-Target address (not for plotting): xch1tcryankcz0p9ueh9dhyrh0w0zgkdpllpvradwmn5ut2p7peg8k8qhvamzr
-Number of plots: 0
-Owner public key: 908229fec969abd228336d0ba2ceff6cc4f074bc57e2730a7a960076d3188d6afd8b8068dd1cf40e31268a7e6420b8fa
-<b>**Pool contract address (use ONLY for plotting - do not send money to this address): xch13rht0xz4tpdqfq08e3dk20kewg9cjj3pw0wwjf7vay8whlxn7ppqapeqhz**</b>
-Claimable balance: 0.0 xch (0 mojo)
-
-Take the Pool contract address and decode it with use of https://www.chiaexplorer.com/tools/address-puzzlehash-converter into puzzle_hash, then you take this puzzle without leading hexadecimal '0x' and that is contract hash you are seeking for.
 ```
 # WINDOWS USERS:
 ```shell
@@ -106,4 +88,24 @@ $Env:LAUNCHER_HASH="yourLauncherHash"
 # Set env var to pool_contract_address. 
 $Env:POOL_CONTRACT_ADDRESS="yourPoolContractAddress" #Scroll down to see how to find this
 #(Linux Users) export POOL_CONTRACT_ADDRESS=xch13rht0xz4tpdqfq08e3dk20kewg9cjj3pw0wwjf7vay8whlxn7ppqapeqhz
-  ```
+```
+# FAQ
+```shell
+How to find your CONTRACT_HASH?
+cd chia-blockhain
+. ./activate
+chia plotnft show
+Wallet height: 5344
+Sync status: Not synced
+Wallet id 2: 
+Current state: SELF_POOLING
+Current state from block height: 1739
+Launcher ID: eaf0cbae497933a6c029a3819759fe148829dfde0316cb0512ccad23edce6afa
+Target address (not for plotting): xch1tcryankcz0p9ueh9dhyrh0w0zgkdpllpvradwmn5ut2p7peg8k8qhvamzr
+Number of plots: 0
+Owner public key: 908229fec969abd228336d0ba2ceff6cc4f074bc57e2730a7a960076d3188d6afd8b8068dd1cf40e31268a7e6420b8fa
+<b>**Pool contract address (use ONLY for plotting - do not send money to this address): xch13rht0xz4tpdqfq08e3dk20kewg9cjj3pw0wwjf7vay8whlxn7ppqapeqhz**</b>
+Claimable balance: 0.0 xch (0 mojo)
+
+Take the Pool contract address and decode it with use of https://www.chiaexplorer.com/tools/address-puzzlehash-converter into puzzle_hash, then you take this puzzle without leading hexadecimal '0x' and that is contract hash you are seeking for.
+```
