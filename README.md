@@ -56,7 +56,7 @@ python -m venv venv
 pip install -e . --extra-index-url https://pypi.chia.net/simple/ 
   
 #Test your setup by running:
-fdi-cli nft-recover --help 
+fd-cli nft-recover --help 
 You should see a an ouput with Usage and Options 
 
 #Then run commands below to recover your Rewards ($LAUNCHER_HASH and $POOL_CONTRACT_ADDRESS can be set as environmental variables, or you can type 'text' into the fd-cli command)
