@@ -47,7 +47,10 @@ Install these Requirements:
 Python: https://www.python.org/downloads/ 
 Git: https://git-scm.com/downloads 
 Then open Windows PowerShell ISE (type Powershell in the search bar and click the app) 
-Then type the commands below 
+Then type the commands below (update the paths for the two $Env variables)
+  
+$Env:FD_CLI_BC_DB_PATH = "C:/Users/YourUserName/.cactus/mainnet/db/blockchain_v1_mainnet.sqlite"
+$Env:FD_CLI_WT_DB_PATH = "C:/Users/YourUserName/.cactus/mainnet/wallet/db/blockchain_wallet_v1_mainnet_<fingerprint>.sqlite"
 
 git clone https://github.com/Cactus-Network/fd-cli 
 cd fd-cli 
