@@ -33,7 +33,7 @@ fd-cli nft-recover \
   -l "$LAUNCHER_HASH" \
   -p "$POOL_CONTRACT_ADDRESS" \
   -nh 127.0.0.1 \
-  -np 18755 \
+  -np 11555 \
   -ct /root/.cactus/mainnet/config/ssl/full_node/private_full_node.crt \
   -ck /root/.cactus/mainnet/config/ssl/full_node/private_full_node.key
   
