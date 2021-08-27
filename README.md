@@ -1,5 +1,5 @@
 Credit to the Flora-Network team for creating and sharing this coin recovery script. The contents below are unique to the Cactus Blockchain Network (Ports, Paths, Windows Install Instructions, etc)<p>
-#Example Command: fd-cli nft-recover -l "$LAUNCHER_HASH" -p "$POOL_CONTRACT_ADDRESS" -nh 127.0.0.1 -np 11555 -ct C:/Users/YourUserName/.cactus/mainnet/config/ssl/full_node/private_full_node.crt -ck C:/Users/YourUserName/.cactus/mainnet/config/ssl/full_node/private_full_node.key   <p>
+#Example Command: fd-cli nft-recover -l $LAUNCHER_HASH -p $POOL_CONTRACT_ADDRESS -nh 127.0.0.1 -np 11555 -ct C:/Users/YourUserName/.cactus/mainnet/config/ssl/full_node/private_full_node.crt -ck C:/Users/YourUserName/.cactus/mainnet/config/ssl/full_node/private_full_node.key   <p>
 #Cactus Full Node Port is 11555
 
 <p>
