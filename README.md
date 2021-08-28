@@ -26,8 +26,14 @@ export FD_CLI_BC_DB_PATH=/root/.cactus/mainnet/db/blockchain_v1_mainnet.sqlite
 export FD_CLI_WT_DB_PATH=/root/.cactus/mainnet/wallet/db/blockchain_wallet_v1_mainnet_<fingerprint>.sqlite
 
 # Set env var to launcher id of NFT plot.
+# Launcher ID: can be obtained using "chia plotnft show". (Convert to HASH via https://www.chiaexplorer.com/tools/address-puzzlehash-converter)
+# Or to find Launcher HASH, use "chia plotnft inspect -h"
+# Execute above command in Chia, as those values are the original NFT contract details, which do not exist in the forks
 export LAUNCHER_HASH=aaa0cbae497933a6c029a3819759fe148829dfde0316cb0512ccad23edce6aaa
+  
 # Set env var to pool_contract_address. 
+# POOL_CONTRACT_ADDRESS: can be obtained using "chia plotnft show"
+# Execute above command in Chia, as those values are the original NFT contract details, which do not exist in the forks
 export POOL_CONTRACT_ADDRESS=xch13rht0xz4tpdqfq08e3dk20kewg9cjj3pw0wwjf7vay8whlxn7ppqapeqhz
 
 fd-cli nft-recover \
