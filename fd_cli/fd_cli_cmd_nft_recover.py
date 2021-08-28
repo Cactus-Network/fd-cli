@@ -120,7 +120,7 @@ def fd_cli_cmd_nft_recover(
         fd_cli_print_raw('Coins eligible for recovery:', pre=pre)
         fd_cli_print_coin_lite_many(coin_records, pre=pre + 1)
 
-    coin_solutions: list[dict] = []
+    coin_spends: list[dict] = []
 
     for coin in coin_records:
         coin_parent: str = coin[6]
@@ -130,7 +130,7 @@ def fd_cli_cmd_nft_recover(
             Program.to([uint64(coin_amount), 0])
         )).hex()
 
-        coin_solutions.append({
+        coin_spends.append({
             'coin': {
                 'amount': coin_amount,
                 'parent_coin_info': coin_parent,
@@ -145,11 +145,11 @@ def fd_cli_cmd_nft_recover(
     if not cert_ca_path:
         urllib3.disable_warnings()
 
-    for coin_solutions_b in [coin_solutions[x:x + 50] for x in range(0, len(coin_solutions), 50)]:
+    for coin_spends_b in [coin_spends[x:x + 50] for x in range(0, len(coin_spends), 50)]:
 
         balance_batch: int = 0
 
-        for coin_solution in coin_solutions_b:
+        for coin_solution in coin_spends_b:
             balance_batch += coin_solution['coin']['amount']
 
         try:
@@ -160,7 +160,7 @@ def fd_cli_cmd_nft_recover(
                 json={
                     'spend_bundle': {
                         'aggregated_signature': FD_CLI_CST_AGGREGATED_SIGNATURE,
-                        'coin_solutions': coin_solutions_b
+                        'coin_spends': coin_spends_b
                     }
                 })
 
